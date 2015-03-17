@@ -9,13 +9,25 @@ package compilador;
  *
  * @author Chuck
  */
+import java.io.BufferedReader;
+import java.io.FileReader;
 public class Compilador {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Adios Mundo");
+        try{
+            FileReader fr = new FileReader("D:\\proyecto_compiladores_primerparcial\\Compilador\\cadena.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String cadena;
+            
+            while((cadena=br.readLine())!=null){
+                System.out.println(""+cadena);
+            }
+        }catch(Exception ex){
+        
+        }
     }
     
 }
